@@ -1,0 +1,225 @@
+﻿.choose-gdv {
+    padding: 80px 180px;
+    height: auto;
+}
+
+.title-choose-gdv {
+    color: #000;
+    font-family: 'Oswald',sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.choose-gdv > div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.choose-gdv > div > a > img {
+    width: 195px;
+    height: 290px;
+    flex-shrink: 0;
+}
+
+.gdv-info > p {
+    color: #000;
+    font-family: 'Oswald',sans-serif;
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.gdv-info > span {
+    color: #000;
+    font-family: 'Oswald',sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+}
+
+.gdv-button {
+    width: 200px;
+    height: 54px;
+    flex-shrink: 0;
+    background: #091450;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Oswald',sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 42%;
+    margin-top: 40px;
+}
+.swiper {
+    width: 55%;
+    height: fit-content;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.swiper-slide {
+    font-size: 18px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+    .swiper-slide img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+.gym-about {
+    height: 100%;
+    background: rgba(9, 20, 80, 0.50);
+    padding-left: 130px;
+    padding-right: 100px;
+    padding-top: 50px;
+}
+
+    .gym-about > .gym-about-1 > p {
+        color: #FFF;
+        font-family: 'Oswald',sans-serif;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0px;
+    }
+
+    .gym-about > div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+.swiper-slide > p {
+    color: #FFF;
+    font-family: 'Oswald',sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.swiper-slide > span {
+    color: #FFF;
+    font-family: 'Oswald',sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.gym-about-2 {
+    margin-top: 100px;
+    color: #FFF;
+    font-family: 'Oswald',sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.gym-step > div > p {
+    color: #FFF;
+    font-family: 'Oswald',sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    display: flex;
+}
+
+.gym-step > div {
+    display: flex;
+    gap: 245px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.title-child > div > p {
+    color: #000000;
+    font-family: 'Oswald',sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+    margin-bottom: 100px;
+}
+
+.question-child {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+    .question-child > div {
+        display: flex;
+        width: 600px;
+        border-bottom: 2px solid black;
+        padding-bottom: 30px;
+        margin-bottom: 20px;
+    }
+
+        .question-child > div > a {
+            color: #000000;
+            font-family: 'Oswald',sans-serif;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+            .question-child > div > a:nth-child(2) {
+                position: absolute;
+                left: 100%;
+            }
+
+.question-gym {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px
+}
+
+.title-feedback {
+    color: #000000;
+    font-family: 'Oswald',sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.parent-question-gym > div {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFF;
+    padding-left: 130px;
+    padding-right: 100px;
+}
+
+.parent-question-gym p, .parent-question-gym span {
+    color: #000000;
+}
+
+.title-feedback > p {
+    margin: 0px;
+}
+
+.feedback {
+    margin-top: 100px;
+}

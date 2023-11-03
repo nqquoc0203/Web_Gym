@@ -1,0 +1,194 @@
+﻿@model List<CNPM.Models.ChiTietDichVu>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/LayoutPageShare.cshtml";
+}
+<div class="gym-about">
+    <div class="gym-about-1">
+        <p>CHINH PHỤC MỤC TIÊU <br> Ở MỌI CẤP ĐỘ</p>
+        <div class="swiper mySwiper" style="margin: 0px;">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="~/images/gym/rectangle-54051.png" alt="">
+                    <p>CHƯƠNG TRÌNH DÀNH CHO NGƯỜI MỚI</p>
+                    <span>
+                        Bạn muốn tập luyện nhưng không biết bắt đầu từ đâu? Hãy để các HLV cá nhân giúp bạn định
+                        hướng kế hoạch tập luyện phù hợp với nhu cầu của bạn. Giờ đây việc tập luyện sẽ không còn
+                        nhàm chán nữa vì bạn sẽ được truyền cảm hứng liên tục khi tập luyện cùng các HLV cá nhân.
+                    </span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="~/images/gym/rectangle-5406q.png" alt="">
+                    <p>CHƯƠNG TRÌNH TẬP LUYỆN BỨT PHÁ</p>
+                    <span>
+                        Bạn muốn tập luyện nhưng không biết bắt đầu từ đâu? Hãy để các HLV cá nhân giúp bạn định
+                        hướng kế hoạch tập luyện phù hợp với nhu cầu của bạn. Giờ đây việc tập luyện sẽ không còn
+                        nhàm chán nữa vì bạn sẽ được truyền cảm hứng liên tục khi tập luyện cùng các HLV cá nhân.
+                    </span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="~/images/gym/rectangle-54071.png" alt="">
+                    <p>CHƯƠNG TRÌNH DÀNH CHO NGƯỜI CÓ TRỞ NGẠI VỀ SỨC KHOẺ</p>
+                    <span>
+                        Bạn muốn tập luyện nhưng không biết bắt đầu từ đâu? Hãy để các HLV cá nhân giúp bạn định
+                        hướng kế hoạch tập luyện phù hợp với nhu cầu của bạn. Giờ đây việc tập luyện sẽ không còn
+                        nhàm chán nữa vì bạn sẽ được truyền cảm hứng liên tục khi tập luyện cùng các HLV cá nhân.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gym-about-2">
+        <p>QUY TRÌNH TƯ VẤN</p>
+        <div class="gym-step">
+            <div>
+                <img src="~/images/gym/image-19.png" alt="" srcset="">
+                <p>Inbody - Đo chỉ số cơ thể</p>
+            </div>
+            <div>
+                <img src="~/images/gym/image-20.png" alt="">
+                <p>Xây dựng chương trình <br> tập luyện & dinh dưỡng</p>
+            </div>
+            <div>
+                <img src="~/images/gym/image-21.png" alt="">
+                <p>Theo sát & thay đổi phù hợp</p>
+            </div>
+        </div>
+    </div>
+</div>
+@if (!string.IsNullOrEmpty(ViewBag.ChucMungMessage))
+{
+    <div class="chuc-mung-message">
+        <h3 style="color:black">@ViewBag.ChucMungMessage</h3>
+    </div>
+}
+<div class="choose-gdv">
+    <p class="title-choose-gdv">Đăng kí gói dịch vụ</p>
+    <div class="gdv-image">
+        @foreach (var item in Model)
+        {
+            <a href="@Url.Action("Details", "Gym", new { maCT = item.MaCT })">
+                <img src="~/images/gym/@item.HinhAnh" alt="" srcset="">
+            </a>
+        }
+    </div>
+    <div class="gdv-info">
+        <p>@ViewBag.TenCT</p>
+        <span>@ViewBag.MoTa</span>
+    </div>
+    @*@if (ViewBag.ShowButton = false)
+    {*@
+        <div class="gdv-form">
+            @using (Html.BeginForm("DangKy", "Gym", FormMethod.Post))
+            {
+                <input type="hidden" name="maCT" value="@ViewBag.MaCT" />
+                <input type="hidden" name="maKH" value="@ViewBag.MaKH" />
+                <input type="hidden" name="isGanHLV" value="false" />
+                <button type="submit" class="gdv-button" onclick="confirmGanHLV()">Đăng ký</button>
+            }
+        </div>
+    @*}*@
+
+    @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        <p style="color:red;font-size:40px">@ViewBag.ErrorMessage</p>
+    }
+</div>
+<div class="parent-question-gym">
+    <div class="question-gym">
+        <div class="title-child">
+            <div>
+                <p>
+                    CÂU HỎI THƯỜNG GẶP
+                </p>
+            </div>
+            <div class="question-child">
+                <div>
+                    <a href="#">
+                        Các chương trình HLV 1 kèm 1 tại California thường kéo dài bao lâu?
+                    </a>
+                    <a href="#">+</a>
+                </div>
+                <div>
+                    <a href="#">
+                        Liệu chương trình HLV cá nhân có hiệu quả thực sự đối với những tạng người bẩm sinh khó thay đổi?
+                    </a>
+                    <a href="#">+</a>
+                </div>
+                <div>
+                    <a href="#">
+                        Liệu chương trình HLV cá nhân có hiệu quả thực sự đối với những tạng người bẩm sinh khó thay đổi?
+                    </a>
+                    <a href="#">+</a>
+                </div>
+                <div>
+                    <a href="#">
+                        Liệu chương trình HLV cá nhân có hiệu quả thực sự đối với những tạng người bẩm sinh khó thay đổi?
+                    </a>
+                    <a href="#">+</a>
+                </div>
+                <div>
+                    <a href="#">
+                        Liệu chương trình HLV cá nhân có hiệu quả thực sự đối với những tạng người bẩm sinh khó thay đổi?
+                    </a>
+                    <a href="#">+</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <img src="~/images/gym/rectangle-54061.png" alt="" srcset="">
+        </div>
+    </div>
+    <div class="feedback">
+        <div class="title-feedback">
+            <p>
+                CẢM NHẬN HỘI VIÊN
+            </p>
+        </div>
+        <div class="swiper mySwiper" style="margin: 0px;">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="~/images/gym/rectangle-540812.png" alt="">
+                    <p>Chị Thu Phương - Giảm 13kg thành công cùng HLV</p>
+                    <span>
+                        Tập gym là lựa chọn tuyệt vời với mình, nhất là khi thấy cân nặng xuống dần, sứckhỏe cải thiện rõ rệt. Tôi tự tin và yêu đời hơn, không còn dáng vẻ tự ti, lúc nào cũngcúi mặt vì sợ người khác nghĩ mình béo nữa. Thực sự tôi cảm thấy yêu bản thân hơn,việc ăn uống lành mạnh trở thành sở thích lúc nào không hay
+                    </span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="~/images/gym/rectangle-5409.png" alt="">
+                    <p>CHƯƠNG TRÌNH TẬP LUYỆN BỨT PHÁ</p>
+                    <span>
+                        Trước đây, mình từng gặp nhiều vấn đề về sức khỏe như gan nhiễm mỡ, máu nhiễmmỡ, các chỉ số về xương khớp đều ở mức báo động. Sau 4 tuần tập luyện theo chế độBTC, chị Yến đã giảm được 5kg trọng lượng cơ thể. Huấn luyện viên cá nhân đã thiết kế các bài tập cardio xen kẽ với tập tạ với tần suất 4 buổi/tuần, mỗi buổi 60 phút. Ngoài ra, được PT gợi ý thực đơn dinh dưỡng phù hợp với thể trạng, tôi đã thiết kế lại các bữa ăn trong ngày, cố gắng bỏ bớt tinh bột, ăn nhiều rau củ, uống nhiều nước vàtăng cường protein giúp phát triển cơ. Sau 4 tuần tập luyện theo chế độ BTC, tôi đã giảm được 5kg trọng lượng cơ thể
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+
+    </div>
+</div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+    function confirmGanHLV() {
+        // Hiển thị hộp thoại xác nhận
+        var isGanHLV = confirm("Bạn có muốn đăng ký Huấn Luyện Viên?");
+
+        // Thay đổi giá trị của trường ẩn nếu người dùng đã chọn đăng ký HLV
+        document.getElementsByName("isGanHLV")[0].value = isGanHLV;
+    }
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        }
+    });
+</script>

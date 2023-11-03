@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/LayoutPageShare.cshtml";
+}
+
+@Html.Partial("Sildeshow")
+
+@using (Html.BeginForm("Login", "LoginSignUp", FormMethod.Post))
+{
+    <div class="main-login" id="login">
+        <div class="login">
+            <p class="login-title">Chào mừng đến với QDN Center</p>
+            <p class="login-title-signup">Bạn chưa có tài khoản ? <a href="@Url.Action("SignUp", "LoginSignUp")">Đăng kí</a></p>
+            <input type="email" name="email" id="email" placeholder="Vui lòng nhập email...">
+            <div style="position:relative;height:48px">
+                <input type="password" name="pass" id="pass" placeholder="******************">
+                <i class="fa-regular fa-eye" id="eyeIcon" style="color: #b3b3b3;" onclick="ShowPass()"></i>
+            </div>
+            <button type="submit">Đăng nhập</button>
+            @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+            {
+                <div class="error-message">
+                    @ViewBag.ErrorMessage
+                </div>
+            }
+            <div class="login-child">
+                <label class="container">
+                    <input type="checkbox" checked="checked" class="checkbox">
+                    <span class="checkmark">Ghi nhớ <span>tài khoản</span></span>
+                </label>
+                <a href="#">Quên mật khẩu?</a>
+            </div>
+        </div>
+        <div class="img-login" style="height:1024px">
+            <img src="~/images/login/stethoscope-frame-with-copy-space-1.png" alt="">
+        </div>
+    </div>
+}
+<script>
+    function ShowPass() {
+        var x = document.getElementById("pass");
+        var eyeIcon = document.getElementById("eyeIcon");
+        if (x.type === "password") {
+            x.type = "text";
+            eyeIcon.classList.remove("fa-eye");
+            eyeIcon.classList.add("fa-eye-slash");
+        } else {
+            x.type = "password";
+            eyeIcon.classList.remove("fa-eye-slash");
+            eyeIcon.classList.add("fa-eye");
+        }
+    }
+    function scrollToRenderBody() {
+        var renderbodyElement = document.getElementById("renderbody");
+        if (renderbodyElement) {
+            var offsetTop = renderbodyElement.offsetTop; // Lấy khoảng cách từ đỉnh tài liệu đến "renderbody"
+            var scrollDistance = offsetTop + 900; // 100 là khoảng cách bạn muốn điều chỉnh, bạn có thể thay đổi số này tùy ý
+            window.scrollTo({
+                top: scrollDistance,
+                behavior: "smooth" // Cuộn mượt đến vị trí cụ thể
+            });
+        }
+    }
+
+    // Cuộn đến phần "renderbody" khi trang tải xong
+    document.addEventListener("DOMContentLoaded", function (event) {
+        scrollToRenderBody();
+    });
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+        spaceBetween: 30,
+        keyboard: {
+            enabled: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        },
+    });
+
+</script>
+

@@ -1,0 +1,39 @@
+﻿@model List<CNPM.Models.HuanLuyenVien>
+@{
+    ViewBag.Title = "Coach";
+    Layout = "~/Views/Shared/LayoutPageShare.cshtml";
+}
+<div class="banner-coach">
+    <img src="~/images/coach/rectangle.png" alt="" srcset="">
+</div>
+<div class="body-coach">
+    <div class="title-coach">
+        <p>HUẤN LUYỆN VIÊN CỦA CHÚNG TÔI</p>
+    </div>
+    <div class="main-coach">
+        @foreach (var item in Model)
+        {
+            <div class="coach-card">
+                <img src="~/images/coach/@item.HinhAnh" alt="" srcset="">
+                <h3>@item.TenHLV</h3>
+                <p>Môn : @item.MaDV</p>
+                <p>@item.MoTa</p>
+                @if (ViewBag.IsGymCoach == true)
+                {
+                    using (Html.BeginForm("DangKyHLV", "Coach", FormMethod.Post))
+                    {
+                        <input type="hidden" name="maCT" value="@ViewBag.MaCT" />
+                        <input type="hidden" name="maHLV" value="@item.MaHLV" />
+                        <input type="hidden" name="maKH" value="@ViewBag.MaKH" />
+                        <button type="submit">Đăng ký</button>
+                    }
+                }
+            </div>
+        }
+    </div>
+    @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        <p style="color:red;font-size:40px">@ViewBag.ErrorMessage</p>
+    }
+
+</div>

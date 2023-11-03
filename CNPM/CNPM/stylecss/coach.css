@@ -1,0 +1,74 @@
+﻿
+
+.banner-coach > img {
+    width: 100%;
+}
+
+.title-coach > p {
+    color: #000;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.body-coach {
+    padding-left: 245px;
+    padding-right: 245px;
+}
+.main-coach {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap;
+}
+.coach-card {
+    margin-bottom:15px;
+    height: auto;
+    width: 300px;
+    border-radius: 5px;
+    background: #EFEFEF;
+    padding-bottom:10px;
+   
+}
+
+    .coach-card > :nth-child(n+2) {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .coach-card > h3 {
+        margin: 0px;
+        margin-top: 5px;
+        color: #000;
+        font-family: 'Oswald', sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .coach-card > p {
+        color: #000;
+        font-family: 'Oswald', sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 0px;
+    }
+
+    .coach-card >form> button {
+        margin-top: 20px;
+        text-align: center;
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }

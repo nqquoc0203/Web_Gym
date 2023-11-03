@@ -1,0 +1,195 @@
+﻿body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.sign-up-title-1 > p {
+    color: var(--black-balack-10, #323A46);
+    font-family: 'Oswald',sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 150% */
+    margin: 0px;
+}
+
+.main-signup > div > div {
+    margin-bottom: 20px;
+}
+
+.main-signup > div:first-child {
+    margin-left: 125px;
+}
+
+.main-signup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sign-up-title-2 > p {
+    color: var(--black-black-40, #767C84);
+    font-family: 'Oswald',sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    margin: 0px;
+}
+
+.sign-up-firstname-lastname {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 493px;
+}
+
+    .sign-up-firstname-lastname > input {
+        width: 204px;
+        padding: 13px 10px 13px 20px;
+        flex-shrink: 0;
+        border-radius: 5px;
+        border: 1px solid var(--black-black-80, #D1D3D6);
+    }
+
+.sign-up-email > input {
+    display: flex;
+    width: 460px;
+    padding: 13px 10px 13px 20px;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid var(--black-black-80, #D1D3D6);
+}
+
+.sign-up-password > input {
+    display: flex;
+    width: 460px;
+    padding: 13px 10px 13px 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid var(--black-black-80, #D1D3D6);
+}
+
+.sign-up-repassword > input {
+    display: flex;
+    width: 460px;
+    padding: 13px 10px 13px 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid var(--black-black-80, #D1D3D6);
+}
+
+.sign-up-phone-number {
+    display: flex;
+    gap: 20px;
+}
+
+    .sign-up-phone-number > select {
+        width: 100px;
+        padding: 0px 14px 0px 16px;
+        border-radius: 5px;
+        border: 1px solid var(--black-black-80, #D1D3D6);
+        color: var(--black-black-60, #A4A7AD);
+        font-family: 'Oswald',sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px; /* 157.143% */
+    }
+
+    .sign-up-phone-number > input {
+        width: 340px;
+        padding: 13px 10px 13px 20px;
+        flex-shrink: 0;
+        border-radius: 5px;
+        border: 1px solid var(--black-black-80, #D1D3D6);
+    }
+
+.sign-up-address > input {
+    display: flex;
+    width: 460px;
+    padding: 13px 10px 13px 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid var(--black-black-80, #D1D3D6);
+}
+
+.sign-up-checkbox > .container > .checkmark {
+    color: #767C84;
+    font-family: 'Oswald',sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.container {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.sign-up-checkbox > .container > .checkmark > span {
+    color: #1906FF;
+    font-family: 'Oswald',sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: underline;
+    letter-spacing: 0.5px;
+}
+
+.sign-up-submit > button {
+    border: none;
+    display: flex;
+    width: 492px;
+    padding: 13px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background: var(--primary-blue-primary-blue, #796EFF);
+    color: var(--white-white-color, #FFF);
+    text-align: center;
+    font-family: 'Oswald',sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 157.143% */
+}
+
+.sign-up-check > p {
+    color: var(--black-black-40, #767C84);
+    font-family: 'Oswald',sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+}
+
+    .sign-up-check > p > a {
+        color: var(--primary-blue-primary-blue, #796EFF);
+        font-family: 'Oswald',sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        text-decoration: none;
+    }
+
+.sign-up-password, .sign-up-repassword {
+    position: relative;
+}
+
+.icon > i {
+    position: absolute;
+    top: 30%;
+    left: 94%;
+}
+input::placeholder {
+    color:grey;
+}

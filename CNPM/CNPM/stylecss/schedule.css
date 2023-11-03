@@ -1,0 +1,246 @@
+﻿
+.parent-schedule {
+    position: relative;
+    width: auto;
+    height: 1000px;
+    background-color: #222C62;
+}
+.schedule {
+    position: absolute;
+    left: 170px;
+    top: 46px;
+}
+
+    .schedule >.title {
+        font-weight: 500;
+        color: white;
+        font-size: 32px;
+    }
+
+    .schedule >.select {
+        position: absolute;
+        top: 70px;
+        z-index: 3;
+    }
+
+    .schedule .button {
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Oswald', sans-serif;
+        border-radius: 5px 5px 5px 5px;
+        background-color: white;
+        padding: 10px 20px;
+        width: 250px;
+        height: 54px;
+        color: #222C62;
+        font-size: 16px;
+        font-weight: 300;
+        border-width: 2px 0px 2px 0px;
+    }
+
+    .schedule #button1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .schedule #button2 {
+        position: absolute;
+        top: 0;
+        left: 300px;
+    }
+
+    .schedule #button3 {
+        position: absolute;
+        top: 0;
+        left: 600px;
+    }
+
+    .schedule #button4 {
+        position: absolute;
+        top: 0;
+        left: 900px;
+    }
+
+    .schedule .arrow {
+        border: #222C62 solid;
+        border-width: 0 2px 2px 0;
+        padding: 5px;
+        transform: rotate(45deg)
+    }
+
+    .schedule .dropdown {
+        background-color: white;
+        width: 250px;
+        border-radius: 0 0 5px 5px;
+        border: #222C62 solid;
+        border-width: 0 0 2px 0;
+    }
+
+    .schedule #dropdown1 {
+        position: absolute;
+        top: 50px;
+    }
+
+    .schedule #dropdown2 {
+        position: absolute;
+        top: 50px;
+        left: 300px;
+    }
+
+    .schedule #dropdown3 {
+        position: absolute;
+        top: 50px;
+        left: 600px
+    }
+
+    .schedule #dropdown4 {
+        position: absolute;
+        top: 50px;
+        left: 900px
+    }
+
+.schedule label {
+    display: block;
+    padding: 10px;
+    color: #222C62;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+    .schedule label:hover {
+        background-color: #222C62;
+        color: white;
+    }
+
+    .schedule .option {
+        display: none;
+    }
+
+    .schedule .hidden {
+        display: none;
+    }
+
+    .schedule .time {
+        background-color: white;
+        height: 400px;
+        width: fit-content;
+        position: absolute;
+        top: 170px;
+        z-index: 2;
+    }
+
+    .schedule .day {
+        display: flex;
+        color: #222C62;
+        font-size: 16px;
+        font-weight: 300;
+        width: 1150px;
+        height: 70px;
+        padding-left: 50px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+       /* justify-content: center;*/
+    }
+
+    .day div {
+        text-align: center;
+        margin-right: 20px;
+    }
+
+.line {
+    border: #222C62 solid;
+    border-width: 0 1px 0 0;
+    min-height: 700px;
+    height: fit-content;
+}
+
+.yoga {
+    border-radius: 6px;
+    background: #24B0C9;
+    width:153px;
+    height: fit-content;
+    position: relative;
+    /*left: 190px;*/
+    margin-bottom: 40px;
+}
+
+.yoga-card {
+    border-radius: 0px 6px 6px 0px;
+    background: #E6FEFF;
+    width:max-content;
+    height: fit-content;
+    position: relative;
+    left: 5px;
+}
+
+.des {
+    color: #818181;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 10px;
+}
+
+    .des span {
+        line-height: 30px;
+    }
+
+#yoga-title {
+    color: #24B0C9;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.aerobic {
+    border-radius: 6px;
+    background: #FD0054;
+    width: 120px;
+    height: fit-content;
+    position: relative;
+    left: 190px;
+    margin-bottom: 40px;
+}
+
+.aerobic-card {
+    border-radius: 0px 6px 6px 0px;
+    background: #F9DFE8;
+    width: 115px;
+    height: fit-content;
+    position: relative;
+    left: 5px;
+}
+
+#aerobic-title {
+    color: #FD0054;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.boxing {
+    border-radius: 6px;
+    background: #6752E9;
+    width: 120px;
+    height: fit-content;
+    position: relative;
+    left: 190px;
+    margin-bottom: 40px;
+}
+
+.boxing-card {
+    border-radius: 0px 6px 6px 0px;
+    background: #E9EFFF;
+    width: 115px;
+    height: fit-content;
+    position: relative;
+    left: 5px;
+}
+
+#boxing-title {
+    color: #6752E9;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}

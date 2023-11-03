@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css" href="~/stylecss/headerrr.css" />
+    <link rel="stylesheet" type="text/css" href="~/stylecss/introduction.css" />
+    @*<link rel="stylesheet" type="text/css" href="~/stylecss/slideshow.css" />*@
+    <link rel="stylesheet" type="text/css" href="~/stylecss/trangchu.css" />
+    <link rel="stylesheet" type="text/css" href="~/stylecss/login.css" />
+    <script src="https://kit.fontawesome.com/51155b8eaf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="~/stylecss/footer.css" />
+    <link rel="stylesheet" type="text/css" href="~/stylecss/signup.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/stylecss/news.css" />
+    <link rel="stylesheet" type="text/css" href="~/stylecss/trial.css" />
+    <link rel="stylesheet" type="text/css" href="~/stylecss/schedule.css" />
+    <link rel="stylesheet" type="text/css" href="~/stylecss/gym.css" />
+    <link rel="stylesheet" type="text/css" href="~/stylecss/coach.css" />
+</head>
+<body>
+    <header>
+        <a href="@Url.Action("Index","TrangChu")" style="text-decoration:none">
+            <img src="~/images/header/icon.svg" alt="" srcset="">
+            <span>QDN CENTER</span>
+        </a>
+        <nav>
+            <ul class="main-menu-first">
+                <li>
+                    <a href="@Url.Action("Schedule","Schedule")">DANH MỤC</a>
+
+                </li>
+                <li><a href="@Url.Action("Index","Introduction")" active>GIỚI THIỆU</a></li>
+                <li><a href="#">HỆ THỐNG CỬA HÀNG</a></li>
+                <li><a href="@Url.Action("Coach","Coach")">HỖ TRỢ KHÁCH HÀNG</a></li>
+
+            </ul>
+        </nav>
+        <nav>
+            <ul class="main-menu-second">
+                <li>
+                    @if (Session["LoggedInUserId"] == null)
+                        {
+                            <a href="@Url.Action("Login","LoginSignUp")"><img src="~/images/header/profile.svg" alt="" srcset=""></a>
+                        }
+                     else
+                        {
+                            <span>Xin chào @Session["NameUser"]</span>
+                            <a href="@Url.Action("Logout", "LoginSignUp")">Đăng xuất</a><br />
+                            <span>Số tiền của bạn @Session["SoTienCuaKH"]</span>
+                            <a href="https://me.momo.vn/x3IbTQsGsPfRuzIyt7tXfz">Nạp tiền</a>
+                        }
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="renderbody">
+        @RenderBody()
+    </div>
+    <footer>
+        <div>
+            <nav>
+                <ul>
+                    <li>
+                        <p><img src="~/images/header/icon-ionic-ios-fitness.svg" alt="" srcset="">QDN CENTER</p>
+                    </li>
+                    <li>
+                        <p style="margin-top: -10px;">Khám phá niềm đam mê thể thao,<br> khơi dậy sức mạnh bất tận</p>
+                    </li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li>
+                        <p>DỊCH VỤ</p>
+                    </li>
+                    <li><a href="#">GYM</a></li>
+                    <li><a href="#">YOGA</a></li>
+                    <li><a href="#">AEROBIC</a></li>
+                    <li><a href="#">BOXING</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li>
+                        <p>CÔNG TY</p>
+                    </li>
+                    <li><a href="#">VỀ CHÚNG TÔI</a></li>
+                    <li><a href="#">ĐIỀU KHOẢN DỊCH VỤ</a></li>
+                    <li><a href="#">CHÍNH SÁCH BẢO MẬT</a></li>
+                    <li><a href="#">CHÍNH SÁCH THANH TOÁN</a></li>
+                    <li><a href="#">GIẢI QUYẾT KHIẾU NẠI</a></li>
+                    <li><a href="#">TUYỂN DỤNG</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li>
+                        <p>ĐĂNG KÝ</p>
+                    </li>
+                    <li><input type="text" name="" id=""></li>
+                    <li><button type="button">SUBCRISE</button></li>
+                </ul>
+            </nav>
+        </div>
+        <div></div>
+        <div>
+            <nav>
+                <ul>
+                    <li>
+                        <img src="~/images/footer/map-pin.svg" alt="" srcset=""> 828 Sư Vạn Hạnh, Phường 13, Quận 10, TP.
+                        HCM
+                    </li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li><img src="~/images/footer/phone.svg" alt="">(028) 3863 2052 - (028) 3862 9232</li>
+                    <li>
+                        <p>Copyright © QDN Center 2023. All rights reserved.</p>
+                    </li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li><img src="~/images/footer/mail.svg" alt="">contact@huflit.edu.vn</li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li><a href="#"><img src="~/images/footer/icon-awesome-facebook.svg" alt="" srcset=""></a></li>
+                    <li><a href="#"><img src="~/images/footer/icon-awesome-instagram.svg" alt="" srcset=""></a></li>
+                    <li><a href="#"><img src="~/images/footer/icon-awesome-youtube.svg" alt=""></a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

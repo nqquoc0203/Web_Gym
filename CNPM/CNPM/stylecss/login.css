@@ -1,0 +1,121 @@
+﻿body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+
+.login {
+    margin-left: 125px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .login > p {
+        margin: 0px;
+    }
+
+    .login p, .login input:not(.checkbox), .login button, .login-child, .login > div {
+        margin-bottom: 20px;
+    }
+
+.login-child {
+    display: flex;
+    gap: 250px;
+}
+
+.login-title {
+    color: var(--black-balack-10, #323A46);
+    font-family: 'Oswald',sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33px;
+}
+
+.login-title-signup {
+    color: var(--black-black-40, #767C84);
+    font-family: 'Oswald',sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 112.5% */
+}
+
+    .login-title-signup > a {
+        color: var(--primary-blue-primary-blue, #796EFF);
+        font-family: 'Oswald',sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        text-decoration: none;
+    }
+
+.login > input , .login>div>input{
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-blue-primary-blue, #796EFF);
+    padding-left: 20px;
+    width:425.5px
+}
+
+.login > button {
+    width: auto;
+    padding: 13px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: none;
+    background: var(--primary-blue-primary-blue, #796EFF);
+    color: var(--white-white-color, #FFF);
+    text-align: center;
+    font-family: 'Oswald',sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+}
+
+.login-child > a {
+    text-decoration: none;
+    color: var(--primary-blue-primary-blue, #796EFF);
+    text-align: center;
+    font-family: 'Oswald',sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 157.143% */
+}
+
+.container > span {
+    color: var(--black-black-40, #767C84);
+    font-family: 'Oswald',sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+}
+
+    .container > span > span {
+        color: #796EFF;
+        font-family: 'Oswald',sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+
+.login > div > i {
+    position: absolute;
+    top: 37%;
+    left: 93.5%;
+}
+.login > input::placeholder, .login > div > input::placeholder {
+    color: var(--black-black-40, #767C84);
+}

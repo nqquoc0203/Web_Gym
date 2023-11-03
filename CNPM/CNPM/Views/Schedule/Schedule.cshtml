@@ -1,0 +1,217 @@
+﻿@model List<CNPM.Models.LichTap>
+@{
+    ViewBag.Title = "Schedule";
+    Layout = "~/Views/Shared/LayoutPageShare.cshtml";
+    var db = new CNPM.Models.TrungTamTheThaoEntities();
+}
+
+
+@Html.Partial("Sildeshow")
+
+<div class="parent-schedule">
+    @if (Session["LoggedInUserId"] != null)
+    {
+        <div class="schedule">
+            <div class="title">TÌM KIẾM LỊCH TẬP</div>
+            <div class="time">
+
+                <div class="day">
+                    @{
+                        var ngayHienTai = DateTime.Now.Date;
+                        var soNgayHienThi = 0;
+                    }
+                    @foreach (var item in Model)
+                    {
+                        if (soNgayHienThi >= 5)
+                        {
+                            break;
+                        }
+                        if (item.Ngay >= ngayHienTai)
+                        {
+                            var thongTinDangKy = db.ThongTinDangKies.FirstOrDefault(ttdk => ttdk.MaDK == item.MaDK);
+                            var huanLuyenVien = thongTinDangKy.HuanLuyenVien; // Lấy thông tin Huấn luyện viên từ ThongTinDangKy
+                            var maChiTiet = thongTinDangKy.MaCT;
+                            var chiTietDichVu = db.ChiTietDichVus.FirstOrDefault(ct => ct.MaCT == maChiTiet);// Lấy mã dịch vụ từ ThongTinDangKy
+
+                            <div style="display:flex;flex-direction:column;gap:50px">
+                                <div>
+                                    <span>@(item.Ngay?.ToString(@"dd/MM"))</span><br>
+                                    <span>@(item.Ngay?.ToString(@"ddd"))</span>
+                                </div>
+                                <div class="yoga">
+                                    <div class="yoga-card">
+                                        <div class="des">
+                                            <span id="yoga-title">@chiTietDichVu.MaDV</span><br>
+                                            <span>Giờ bắt đầu: @item.GioBatDau.ToString(@"hh\:mm")</span><br>
+                                            <span>Giờ kết thúc: @(item.GioKetThuc?.ToString(@"hh\:mm"))</span><br>
+                                            <span>Huấn luyện viên: @huanLuyenVien.TenHLV</span><br>
+                                            <span>Phòng: @item.TenPhong</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+
+                            soNgayHienThi++;
+                        }
+                    }
+                    <div>
+                        Chúng tôi đang tiếp tục sắp xếp lịch cho bạn
+                    </div>
+                </div>
+            </div>
+        </div>
+     }
+    else
+            {
+                <div style="text-align:center;color:white;font-size:50px">
+                     Vui lòng đăng nhập
+                </div>
+            }
+    </div>
+<script>
+    const button1 = document.querySelector('#button1');
+    const dropdown1 = document.querySelector('#dropdown1');
+
+    const button2 = document.querySelector('#button2');
+    const dropdown2 = document.querySelector('#dropdown2');
+
+    const button3 = document.querySelector('#button3');
+    const dropdown3 = document.querySelector('#dropdown3');
+
+    const button4 = document.querySelector('#button4');
+    const dropdown4 = document.querySelector('#dropdown4');
+
+    const options1 = document.querySelectorAll('.option1');
+    const options2 = document.querySelectorAll('.option2');
+    const options3 = document.querySelectorAll('.option3');
+    const options4 = document.querySelectorAll('.option4');
+
+    const labelTitle1 = document.querySelector('#select-label1');
+    const labelTitle2 = document.querySelector('#select-label2');
+    const labelTitle3 = document.querySelector('#select-label3');
+    const labelTitle4 = document.querySelector('#select-label4');
+
+
+    button1.addEventListener('click', function (e) {
+        e.preventDefault();
+        dropdown1.classList.toggle('hidden');
+    })
+
+    button2.addEventListener('click', function (e) {
+        e.preventDefault();
+        dropdown2.classList.toggle('hidden');
+    })
+
+    button3.addEventListener('click', function (e) {
+        e.preventDefault();
+        dropdown3.classList.toggle('hidden');
+    })
+
+    button4.addEventListener('click', function (e) {
+        e.preventDefault();
+        dropdown4.classList.toggle('hidden');
+    })
+
+    options1.forEach(function (option) {
+        option.addEventListener('click', function (e) {
+            const labelEle = document.querySelector(`label[for="${e.target.id}"]`);
+            labelTitle1.innerText = labelEle.innerText;
+            dropdown1.classList.toggle('hidden');
+        })
+    })
+
+    options2.forEach(function (option) {
+        option.addEventListener('click', function (e) {
+            const labelEle = document.querySelector(`label[for="${e.target.id}"]`);
+            labelTitle2.innerText = labelEle.innerText;
+            dropdown2.classList.toggle('hidden');
+        })
+    })
+
+    options3.forEach(function (option) {
+        option.addEventListener('click', function (e) {
+            const labelEle = document.querySelector(`label[for="${e.target.id}"]`);
+            labelTitle3.innerText = labelEle.innerText;
+            dropdown3.classList.toggle('hidden');
+        })
+    })
+
+    options4.forEach(function (option) {
+        option.addEventListener('click', function (e) {
+            const labelEle = document.querySelector(`label[for="${e.target.id}"]`);
+            labelTitle4.innerText = labelEle.innerText;
+            dropdown4.classList.toggle('hidden');
+        })
+    })
+
+
+
+</script>
+
+@*<div class="select">
+        <button class="button" id="button1">
+            <span id="select-label1">Chọn tỉnh thành</span>
+            <div class="arrow"></div>
+        </button>
+        <div class="dropdown hidden" id="dropdown1">
+            <label for="HCM" class="select-item">Hồ Chí Minh</label>
+            <input type="radio" class="option option1" id="HCM" name="city" value="HCM">
+
+            <label for="HN" class="select-item">Hà Nội</label>
+            <input type="radio" class="option option1" id="HN" name="city" value="HN">
+
+            <label for="CT" class="select-item">Cần Thơ</label>
+            <input type="radio" class="option option1" id="CT" name="city" value="CT">
+
+            <label for="DN" class="select-item">Đà Nẵng</label>
+            <input type="radio" class="option option1" id="DN" name="city" value="DN">
+        </div>
+
+        <button class="button" id="button2">
+            <span id="select-label2">Chọn câu lạc bộ</span>
+            <div class="arrow"></div>
+        </button>
+        <div class="dropdown hidden" id="dropdown2">
+            <label for="CLBGV" class="select-item"> CLB Gò Vấp</label>
+            <input type="radio" class="option option2" id="CLBGV" name="clb" value="clbgv">
+
+            <label for="CLBSVH" class="select-item">CLB Sư Vạn Hạnh</label>
+            <input type="radio" class="option option2" id="CLBSVH" name="city" value="clbsvh">
+
+        </div>
+
+        <button class="button" id="button3">
+            <span id="select-label3">Chọn bộ môn</span>
+            <div class="arrow"></div>
+        </button>
+        <div class="dropdown hidden" id="dropdown3">
+            <label for="YG" class="select-item">Yoga</label>
+            <input type="radio" class="option option3" id="YG" name="subject" value="yg">
+
+            <label for="KB" class="select-item">Kick-boxing</label>
+            <input type="radio" class="option option3" id="KB" name="subject" value="kb">
+
+            <label for="AR" class="select-item">Aerobic</label>
+            <input type="radio" class="option option3" id="AR" name="subject" value="ar">
+
+        </div>
+
+        <button class="button" id="button4">
+            <span id="select-label4">Chọn tuần</span>
+            <div class="arrow"></div>
+        </button>
+        <div class="dropdown hidden" id="dropdown4">
+            <label for="18/6" class="select-item">18/6</label>
+            <input type="radio" class="option option4" id="18/6" name="week" value="18/6">
+
+            <label for="25/6" class="select-item">25/6</label>
+            <input type="radio" class="option option4" id="25/6" name="week" value="25/6">
+
+            <label for="2/7" class="select-item">2/7</label>
+            <input type="radio" class="option option4" id="2/7" name="week" value="2/7">
+
+            <label for="9/7" class="select-item">9/7</label>
+            <input type="radio" class="option option4" id="9/7" name="week" value="9/7">
+        </div>
+    </div>*@

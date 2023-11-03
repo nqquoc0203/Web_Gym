@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TrungTamTheThaoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="makh" />
+    </Key>
+    <Property Name="makh" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tenkh" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="hokh" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="matkhau" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="gioitinh" Type="nvarchar" MaxLength="10" />
+    <Property Name="diachi" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ngaysinh" Type="date" />
+    <Property Name="maloai" Type="varchar" MaxLength="3" />
+    <Property Name="chitieu" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="sodienthoai" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoaiKhachHang">
+    <Key>
+      <PropertyRef Name="maloai" />
+    </Key>
+    <Property Name="maloai" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="tenloai" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__KhachHang__maloa__267ABA7A">
+    <End Role="LoaiKhachHang" Type="Self.LoaiKhachHang" Multiplicity="0..1" />
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiKhachHang">
+        <PropertyRef Name="maloai" />
+      </Principal>
+      <Dependent Role="KhachHang">
+        <PropertyRef Name="maloai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TrungTamTheThaoModelStoreContainer">
+    <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoaiKhachHang" EntityType="Self.LoaiKhachHang" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__KhachHang__maloa__267ABA7A" Association="Self.FK__KhachHang__maloa__267ABA7A">
+      <End Role="LoaiKhachHang" EntitySet="LoaiKhachHang" />
+      <End Role="KhachHang" EntitySet="KhachHang" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

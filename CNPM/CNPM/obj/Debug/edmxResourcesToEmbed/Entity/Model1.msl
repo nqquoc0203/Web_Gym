@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TrungTamTheThaoModelStoreContainer" CdmEntityContainer="TrungTamTheThaoEntities">
+    <EntitySetMapping Name="KhachHangs">
+      <EntityTypeMapping TypeName="TrungTamTheThaoModel.KhachHang">
+        <MappingFragment StoreEntitySet="KhachHang">
+          <ScalarProperty Name="makh" ColumnName="makh" />
+          <ScalarProperty Name="tenkh" ColumnName="tenkh" />
+          <ScalarProperty Name="hokh" ColumnName="hokh" />
+          <ScalarProperty Name="matkhau" ColumnName="matkhau" />
+          <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+          <ScalarProperty Name="maloai" ColumnName="maloai" />
+          <ScalarProperty Name="chitieu" ColumnName="chitieu" />
+          <ScalarProperty Name="sodienthoai" ColumnName="sodienthoai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoaiKhachHangs">
+      <EntityTypeMapping TypeName="TrungTamTheThaoModel.LoaiKhachHang">
+        <MappingFragment StoreEntitySet="LoaiKhachHang">
+          <ScalarProperty Name="maloai" ColumnName="maloai" />
+          <ScalarProperty Name="tenloai" ColumnName="tenloai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

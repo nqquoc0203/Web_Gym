@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2e4c316597a144a09ff2a72bf1fc5748" Name="Diagram1">
+        <EntityTypeShape EntityType="TrungTamTheThaoModel.ChiTietDichVu" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamTheThaoModel.GoiDichVu" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamTheThaoModel.HuanLuyenVien" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamTheThaoModel.KhachHang" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamTheThaoModel.LichTap" Width="1.5" PointX="7.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamTheThaoModel.LoaiDichVu" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamTheThaoModel.LoaiKhachHang" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamTheThaoModel.ThongTinDangKy" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="TrungTamTheThaoModel.FK__ChiTietDi__MaGoi__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamTheThaoModel.FK__ChiTietDic__MaDV__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamTheThaoModel.FK__ThongTinDa__MaCT__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamTheThaoModel.FK__HuanLuyenV__MaDV__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamTheThaoModel.FK__ThongTinD__MAHLV__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamTheThaoModel.FK__KhachHang__MaLoa__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamTheThaoModel.FK__ThongTinDa__MaKH__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamTheThaoModel.FK__LichTap__MaDK__5DCAEF64" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

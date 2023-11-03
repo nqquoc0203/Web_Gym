@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewBag.Title = "Trial";
+    Layout = "~/Views/Shared/LayoutPageShare.cshtml";
+}
+@Html.Partial("Sildeshow")
+
+
+
+
+<div class="register-trial-first">
+    <div class="form-trial">
+        <p>TẬP THỬ MIỄN PHÍ <br> TẠI PHÒNG TẬP CAO CẤP</p>
+        <span>
+            Đăng ký nhận tư vấn gói tập thử miễn phí hoặc tham quan Câu lạc bộ để cảm nhận chất lượng dịch vụ ngay hôm nay
+        </span>
+        <form action="#">
+            <label for="nametrial">Họ và tên:</label><br>
+            <input type="text" id="nametrial" placeholder="Vui lòng nhập tại đây"><br>
+            <label for="phonetrial">Số điện thoại:</label><br>
+            <input type="tel" name="" id="phonetrial" placeholder="Vui lòng nhập tại đây"><br>
+            <label for="emailtrial">Email:</label><br>
+            <input type="text" id="emailtrial" placeholder="Vui lòng nhập tại đây"><br>
+            <button type="submit">ĐĂNG KÝ NGAY</button>
+        </form>
+    </div>
+    <div class="img-trial">
+        <div>
+            <img src="~/images/trialpage/rectangle-5391.png" alt="" srcset="">
+            <div>
+            </div>
+        </div>
+        <div>
+            <img src="~/images/trialpage/rectangle-5392.png" alt="">
+            <div>
+            </div>
+        </div>
+        <div>
+            <img src="~/images/trialpage/rectangle-5395.png" alt="">
+        </div>
+    </div>
+</div>
+<div class="about-trial">
+    <div class="child-about-trial-1">
+        <div>
+            <h5>ĐẾN QDN CENTER TẬP LUYỆN <br> ĐA DẠNG BỘ MÔN</h5>
+            <p>Mỗi bộ môn tập luyện sẽ có cường độ, mức độ hiệu quả khác nhau và phù hợp riêng cho mỗi người. Tại QDN CENTER, Hội viên sẽ được tập luyện không giới hạn hơn 40+ bộ môn.</p>
+        </div>
+        <div class="child-child-about-trial">
+            <div>
+                <img src="~/images/trialpage/rectangle-5397.png" alt="">
+                <img src="~/images/trialpage/rectangle-5398.png" alt="">
+            </div>
+            <div>
+                <p>
+                    Các lớp tập bản quyền Quốc tế LesMills <br>
+                    Kết hợp âm nhạc sôi động, cùng các bài tập bản quyền có sự hướng dẫn của HLV, nhóm bộ môn giúp đốt cháy mỡ thừa hiệu quả.  Đây cũng là những bộ môn được hội viên yêu thích nhất.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="child-about-trial-2">
+        <div>
+            <img src="~/images/trialpage/rectangle-5404.png" alt="">
+            <p>GYM</p>
+            <span>
+                Tăng cơ, giảm mỡ hiệu quả với HLV cá nhân cùng máy tập hiện đại.
+            </span>
+        </div>
+        <div>
+            <img src="~/images/trialpage/rectangle-54041.png" alt="">
+            <p>YOGA</p>
+            <span>
+                Thân khỏe, tâm an cùng Yoga với Master Ấn Độ tại Studio cao cấp.
+            </span>
+        </div>
+        <div>
+            <img src="~/images/trialpage/rectangle-54042.png" alt="">
+            <p>AEROBIC</p>
+            <span>
+                Vượt qua giới hạn, tạo nên sức khỏe tuyệt vời với môn aerobic.
+            </span>
+        </div>
+        <div>
+            <img src="~/images/trialpage/rectangle-54043.png" alt="">
+            <p>BOXING</p>
+            <span>
+                Đánh bật mọi giới hạn thể hiện sức mạnh và sự kiên nhẫn với boxing.
+            </span>
+        </div>
+    </div>
+    <div class="child-about-trial-3">
+        <div>
+            <h5>TRẢI NGHIỆM DỊCH VỤ <br> VÀ TIỆN ÍCH 5 SAO</h5>
+            <p>Sử dụng tất cả dịch vụ & tiện ích cao cấp sau tập luyện mà không phát sinh phí, giúp thư giãn tinh thần và phục hồi cơ thể.</p>
+        </div>
+        <div>
+            <img src="~/images/trialpage/rectangle-5399.png" alt="">
+            <p>Sauna xông hơi ướt, khô</p>
+        </div>
+        <div>
+            <img src="~/images/trialpage/rectangle-54001.png" alt="">
+            <p>Khăn tập thể thao cao cấp</p>
+        </div>
+        <div>
+            <img src="~/images/trialpage/rectangle-5401.png" alt="">
+            <p>Tủ đồ cá nhân thông minh E-Smart Locker an toàn</p>
+        </div>
+        <div>
+            <img src="~/images/trialpage/rectangle-5402.png" alt="">
+            <p>Phòng vệ sinh, phòng tắm sạch sẽ</p>
+        </div>
+    </div>
+</div>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        keyboard: {
+            enabled: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+
+</script>
+
