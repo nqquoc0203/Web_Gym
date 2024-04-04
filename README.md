@@ -1,18 +1,14 @@
-![AEROBIC](https://github.com/nqquoc0203/Web_Gym/assets/116379277/a8081b1c-c947-4326-8167-bdafa536d944)
-![YOGA](https://github.com/nqquoc0203/Web_Gym/assets/116379277/12e8030c-aeef-4724-a0be-a49ecfd0352a)
-![Về chúng tôi](https://github.com/nqquoc0203/Web_Gym/assets/116379277/994d8854-11dd-45e5-b96b-b7cf6ff8140d)
 ![TRANG CHỦ](https://github.com/nqquoc0203/Web_Gym/assets/116379277/85b672c7-e3be-41f4-9987-2770942d1eff)
-![Tuyển dụng](https://github.com/nqquoc0203/Web_Gym/assets/116379277/5b788ecd-2a5c-44b8-87f5-82e531766b2c)
-![TIN TỨC](https://github.com/nqquoc0203/Web_Gym/assets/116379277/1f300436-ce62-4063-914a-d6522ec3681b)
-![Slideshow](https://github.com/nqquoc0203/Web_Gym/assets/116379277/04bddfd8-6074-4775-a8d2-a61c133f4406)
+![ĐĂNG NHẬP](https://github.com/nqquoc0203/Web_Gym/assets/116379277/386f647a-3556-4627-a10a-edd81f9e7764)
+![GIỚI THIỆU](https://github.com/nqquoc0203/Web_Gym/assets/116379277/97b56d04-ae90-4ccf-a9b1-064d8f0c74af)
+
 ![LỊCH TẬP-1](https://github.com/nqquoc0203/Web_Gym/assets/116379277/ef5a1437-43de-4f66-a024-f4d371332e64)
 ![LỊCH TẬP](https://github.com/nqquoc0203/Web_Gym/assets/116379277/058b03f5-825f-4770-9942-726fc3b38f84)
-![HUẤN LUYỆN VIÊN](https://github.com/nqquoc0203/Web_Gym/assets/116379277/dbc952f2-7bec-4725-8554-ea0ae6f94403)
-![GIỚI THIỆU](https://github.com/nqquoc0203/Web_Gym/assets/116379277/97b56d04-ae90-4ccf-a9b1-064d8f0c74af)
-![Giải quyết khiếu nại](https://github.com/nqquoc0203/Web_Gym/assets/116379277/25ec33e1-25de-47d8-b476-114ee999696b)
+
 ![GYM](https://github.com/nqquoc0203/Web_Gym/assets/116379277/fd4f0d2b-423e-4ac9-8008-850eea177823)
-![Điều kiện sử dụng](https://github.com/nqquoc0203/Web_Gym/assets/116379277/2695923d-632e-43a9-aa59-1f103b05a712)
-![ĐĂNG NHẬP](https://github.com/nqquoc0203/Web_Gym/assets/116379277/386f647a-3556-4627-a10a-edd81f9e7764)
-![Chính sách thanh toán](https://github.com/nqquoc0203/Web_Gym/assets/116379277/969a205b-7cc6-4015-81b1-4b5231f3ac41)
-![Chính sách bảo mật](https://github.com/nqquoc0203/Web_Gym/assets/116379277/365d4e8e-c07d-4b79-b453-132928e21103)
-![BOXING](https://github.com/nqquoc0203/Web_Gym/assets/116379277/b1712e76-d9df-4a65-a696-fb51f428787c)
+![HUẤN LUYỆN VIÊN](https://github.com/nqquoc0203/Web_Gym/assets/116379277/dbc952f2-7bec-4725-8554-ea0ae6f94403)
+
+![Về chúng tôi](https://github.com/nqquoc0203/Web_Gym/assets/116379277/994d8854-11dd-45e5-b96b-b7cf6ff8140d)
+
+![Tuyển dụng](https://github.com/nqquoc0203/Web_Gym/assets/116379277/5b788ecd-2a5c-44b8-87f5-82e531766b2c)
+
